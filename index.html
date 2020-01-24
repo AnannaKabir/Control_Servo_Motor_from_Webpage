@@ -1,0 +1,35 @@
+<!DOCTYPE html >
+<html>
+<head>
+<title>Web controlled Servo</title>
+<script src="jquery.js"></script>
+
+
+</head>
+
+	<body style="background-color:black;">
+  <header>
+    <div class="container-fluid p-1">
+<h1 style="color:Blue;"> <b> Control the Servo using Arduino and ESP8266 </b> </h1>
+
+<div style="margin: 0; width:500px; height:80px;">
+    <FORM NAME="form" ACTION="" METHOD="GET" style="color:White;">
+        Enter ESP8266 IP Address:
+        <INPUT TYPE="text" NAME="inputbox" >
+    </FORM>
+</div>
+<h1 style="color:White;">Scroll it to rotate servo Motor </h1>
+<input type="range" min="20" max="170" onmouseup="servo1(this.value)" />
+</body>
+
+<script>
+$.ajaxSetup({timeout:1000});
+function servo1(angle)
+{
+    TextVar = form.inputbox.value;
+    ArduinoVar = "http://" + TextVar + ":80";
+    $.get( ArduinoVar, { "sr1": angle })    ;
+    {Connection: close};
+}
+</script>
+</html>
