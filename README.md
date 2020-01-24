@@ -1,1 +1,2 @@
 # Control_Servo_Motor_from_Webpage
+In this project, we are controlling a Servo Motor using a web browser with the help of Arduino and ESP8266. ESP8266 is establishing a connection between the servo motor and the web browser through the IP address. Here We are developing a small webpage using html and java script and send command to Arduino using Wi-Fi module. The servo motor will be controlled by moving the slider on webpage. By using this webpage we can control the Servo from anywhere in the world over the internet.
